@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-
+const newApi = require("./src/routes")
 
 require("dotenv").config();
 const port =  5000 || process.env.PORT;
@@ -16,4 +16,5 @@ mongoose
     .catch((err) => {
         console.error(err);
     });
-    app.use(express.json())
+newApi(app);
+app.use(express.json());
