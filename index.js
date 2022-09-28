@@ -16,5 +16,6 @@ mongoose
     .catch((err) => {
         console.error(err);
     });
-newApi(app);
+
 app.use(express.json());
+newApi(app);
